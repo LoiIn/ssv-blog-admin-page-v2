@@ -1,0 +1,15 @@
+.login{
+  max-width: 720px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.login__form{
+  border: solid 1px #ccc;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.margin__bottom--none{
+  margin: 0px;
+}

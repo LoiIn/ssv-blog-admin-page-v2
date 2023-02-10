@@ -1,0 +1,180 @@
+.sidebar{
+  background-color: #001529 !important;
+  border-right: 0.5px solid rgba(211, 210, 210, 0.919);
+  bottom: 0 !important;
+}
+
+.header{
+  background-color: #fff !important;
+  /* padding: 0px 16px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px dotted rgba(211, 210, 210, 0.919);
+}
+
+.header .search{
+  width: 250px;
+  margin: 0px;
+  border: none;
+  border-radius: 20px;
+  background-color: #eee;
+}
+
+.header .search .ant-input{
+  background-color: #eee;
+}
+
+.user__menu .menu__text{
+  margin-left: 20px;
+}
+
+.logo{
+  height: 64px;
+}
+
+.logo .logo__img{
+  padding-top: 16px;
+}
+
+.content{
+  min-height: calc(100vh - 64px) !important;
+  background-color: #fff;
+}
+
+.dashboard__heading{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.post{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-right: 16px;
+}
+
+.post .post--infor{
+  margin-left: 10px;
+  flex-grow: 1;
+}
+
+.post .post--number{
+  text-align: center;
+  width: 32px;
+  color: #fff;
+  padding: 0px 5px;
+  background-color: #1890ff;
+  border-radius: 15px;
+}
+
+.dashboard{
+  margin: 20px 20px 30px 20px;
+}
+
+.dashboard__row{
+  margin-bottom: 15px;
+}
+
+.topPost{
+  border-radius: 20px;
+  transition: all .2s ease-in-out;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.topPost:hover{
+  transform: scale(1.1);
+}
+
+.user__action{
+  margin: 16px;
+  padding: 10px;
+  background-color: #eee;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user__action .heading{
+  font-size: 20px;
+  margin: 0px;
+}
+
+.table{
+  margin: 0px 16px;
+}
+
+.footer{
+  text-align: center;
+  background-color: #fff;
+}
+
+.search__area, .detail__area{
+  margin: 16px;
+  border-radius: 10px;
+}
+
+.post__content img{
+  width: 100%;
+}
+
+.ant-card-bordered {
+  border-radius: 10px;
+}
+
+.ant-card-head {
+  background-color:#eee;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.ant-card-body {
+  padding-bottom: 40px;
+}
+
+.__table__info {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.__basic__info {
+  width: 100%;
+}
+
+.__basic__info tr {
+ height: 50px;
+}
+
+.__basic__info tr, td, td {
+  border: 1px dotted #eee;
+}
+
+.__basic__info tr td{
+  width: 25%;
+  padding-left: 10px;
+}
+
+.__basic__info tr th {
+  text-align: left !important;
+  padding-left: 10px;
+}
+
+.__post__content {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.acc__avatar {
+  text-align: center;
+}
+
+.acc__avatar img {
+  width: 50%;
+  border-radius: 50%;
+}
+
+.search__form__btn{
+  text-align: center;
+}
