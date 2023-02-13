@@ -7,7 +7,7 @@ import {
   EditOutlined,
 } from "@ant-design/icons";
 import { Link, useNavigate } from "react-router-dom";
-import useHookPost from "../../../hooks/post";
+import useHookPost from "./../../hooks/post";
 import SearchPost from "./Search";
 
 const { Column } = Table;

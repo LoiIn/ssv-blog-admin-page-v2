@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Row, Col, Card, Tag, Image } from "antd";
 
 import { useParams } from "react-router-dom";
-import { showPost } from "../../../apis/post";
+import { showPost } from "./../../apis/post";
 
 export default function DetailPost() {
   let { id } = useParams();

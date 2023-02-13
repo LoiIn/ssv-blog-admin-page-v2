@@ -4,7 +4,7 @@ import {
   countPostsByAgent,
   getReactsInYear,
   getCmtsInYear,
-} from "../../../apis/dashboard";
+} from "./../../apis/dashboard";
 import Highcharts from "highcharts";
 import variablePie from "highcharts/modules/variable-pie.js";
 import HighchartsReact from "highcharts-react-official";

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Row, Col, Card } from "antd";
 
 import { useParams } from "react-router-dom";
-import { showCategory } from "../../../apis/category";
+import { showCategory } from "./../../apis/category";
 
 export default function DetailCategory() {
   let { id } = useParams();

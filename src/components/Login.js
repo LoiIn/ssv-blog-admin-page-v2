@@ -12,8 +12,8 @@ export default function Login() {
   const history = useNavigate();
 
   const handleLogin = async (values) => {
-    let res = await login(values);
-    if (res !== "fail") {
+    let { status, token, data } = await login(values);
+    if (status === "success") {
       history("/");
     }
   };

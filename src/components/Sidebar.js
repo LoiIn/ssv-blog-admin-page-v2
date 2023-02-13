@@ -27,7 +27,6 @@ const menuItems = [
   getItem(<Link to="/users">Account</Link>, "2", <AccountBookOutlined />),
   getItem(<Link to="/posts">Post</Link>, "3", <ProfileOutlined />),
   getItem(<Link to="/categories">Category</Link>, "4", <SettingOutlined />),
-  getItem(<Link to="/contacts">Contact</Link>, "5", <MailOutlined />),
 ];
 
 export default function Sidebar() {

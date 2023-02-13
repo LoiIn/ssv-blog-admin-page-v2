@@ -7,7 +7,7 @@ import {
   EditOutlined,
 } from "@ant-design/icons";
 
-import useHookCategory from "../../../hooks/category";
+import useHookCategory from "./../../hooks/category";
 import { useNavigate } from "react-router-dom";
 import SearchCategory from "./Search";
 import FormCategory from "./Form";

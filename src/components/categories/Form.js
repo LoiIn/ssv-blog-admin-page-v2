@@ -1,6 +1,6 @@
 import React from "react";
 import { Modal, Form, Input } from "antd";
-import { success } from "../../Message";
+import { success } from "./../Message";
 
 export default function FormCategory(props) {
   const [formAdd] = Form.useForm();
@@ -18,7 +18,6 @@ export default function FormCategory(props) {
       : props.onUpdate(props.categoryId, info);
 
     hideModal();
-    success("category", props.categoryId === 0 ? "add" : "update");
   };
 
   return (

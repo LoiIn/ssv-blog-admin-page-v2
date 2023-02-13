@@ -2,9 +2,9 @@ import React from "react";
 import { Layout } from "antd";
 import { Outlet } from "react-router-dom";
 
-import Sidebar from "./home/Sidebar";
-import Head from "./home/Head";
-import "./home/home.css";
+import Sidebar from "./Sidebar";
+import Head from "./Head";
+import "./home.css";
 
 const { Content, Footer } = Layout;
 

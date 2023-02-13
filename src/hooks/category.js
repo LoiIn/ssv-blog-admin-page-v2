@@ -7,9 +7,11 @@ import {
   showCategory,
   search,
 } from "../apis/category";
+import { success, fail } from "../components/Message";
 
 function useHookCategory() {
   const [categories, setCategories] = useState([]);
+  const model = "category";
 
   useEffect(() => {
     getCategories();
@@ -32,7 +34,10 @@ function useHookCategory() {
 
   const addCategory = async (info) => {
     let { status, data } = await addNewCategory(info);
-    if (status === "success") setCategories([...categories, data]);
+    if (status === "success") {
+      setCategories([...categories, data]);
+      success(model, "added");
+    } else fail(model, "added");
   };
 
   const getIndex = (id) => {
@@ -49,6 +54,9 @@ function useHookCategory() {
       let _categories = [...categories];
       _categories[key] = data;
       setCategories(_categories);
+      success(model, "updated");
+    } else {
+      fail(model, "updated");
     }
   };
 
@@ -57,6 +65,9 @@ function useHookCategory() {
     if (res === "success") {
       let _categories = categories.filter((x) => x.id !== id);
       setCategories(_categories);
+      success(model, "deleted");
+    } else {
+      fail(model, "deleted");
     }
   };
 

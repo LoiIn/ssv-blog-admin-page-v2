@@ -12,7 +12,7 @@ export const login = async (values) => {
 export const logout = async () => {
   try {
     let res = await axios.get("/users/logout");
-    return res.data;
+    return res.data.status;
   } catch (err) {
     return "fail";
   }

@@ -19,9 +19,9 @@ import {
 import { UploadOutlined } from "@ant-design/icons";
 import { RollbackOutlined, SearchOutlined } from "@ant-design/icons";
 import { useParams } from "react-router-dom";
-import { getAllCategories } from "../../../apis/category";
-import { addNewPost, showPost, updateInfo } from "../../../apis/post";
-import { getStringDate, changeToSlug, makeMoment } from "../../../apis/tools";
+import { getAllCategories } from "./../../apis/category";
+import { addNewPost, showPost, updateInfo } from "./../../apis/post";
+import { getStringDate, makeMoment } from "./../../apis/tools";
 import { useNavigate } from "react-router-dom";
 
 const { TextArea } = Input;

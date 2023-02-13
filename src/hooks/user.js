@@ -7,9 +7,11 @@ import {
   search,
   changeRole,
 } from "../apis/user";
+import { success, fail } from "./../components/Message";
 
 function useHookUser() {
   const [users, setUsers] = useState([]);
+  const model = "user";
 
   useEffect(() => {
     getUsers();
@@ -32,7 +34,10 @@ function useHookUser() {
 
   const addUser = async (info) => {
     let { status, data } = await addNewUser(info);
-    if (status !== "fail") setUsers([...users, data]);
+    if (status !== "fail") {
+      setUsers([...users, data]);
+      success(model, "added");
+    } else fail(model, "added");
   };
 
   const deleteUser = async (id) => {
@@ -40,7 +45,8 @@ function useHookUser() {
     if (res === "success") {
       let _users = users.filter((x) => x.id !== id);
       setUsers(_users);
-    }
+      success(model, "deleted");
+    } else fail(model, "deleted");
   };
 
   const getIndex = (id) => {
@@ -57,7 +63,8 @@ function useHookUser() {
       let _users = [...users];
       _users[key] = data;
       setUsers(_users);
-    }
+      success("role", "changed");
+    } else fail("role", "changed");
   };
 
   return [users, addUser, deleteUser, viewUser, searchUsers, switchRole];

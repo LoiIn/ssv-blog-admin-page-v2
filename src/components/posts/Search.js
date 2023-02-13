@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { Row, Col, Card, Form, Input, Button, Select, Space } from "antd";
 import { SearchOutlined, RollbackOutlined } from "@ant-design/icons";
 
-import { getAllCategories } from "../../../apis/category";
-import { search } from "../../../apis/user";
+import { getAllCategories } from "./../../apis/category";
+import { search } from "./../../apis/user";
 const { TextArea } = Input;
 
 export default function SearchPost(props) {

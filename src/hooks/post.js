@@ -7,9 +7,11 @@ import {
   showPost,
   search,
 } from "../apis/post";
+import { success, fail } from "./../components/Message";
 
 function useHookPost() {
   const [posts, setPosts] = useState([]);
+  const model = "post";
 
   useEffect(() => {
     getPosts();
@@ -46,7 +48,10 @@ function useHookPost() {
 
   const addPost = async (info) => {
     let { status, data } = await addNewPost(info);
-    if (status === "success") setPosts([...posts, data]);
+    if (status === "success") {
+      setPosts([...posts, data]);
+      success(model, "added");
+    } else fail(model, "added");
   };
 
   const getIndex = (id) => {
@@ -63,7 +68,8 @@ function useHookPost() {
       let _posts = [...posts];
       _posts[key] = data;
       setPosts(_posts);
-    }
+      success(model, "updated");
+    } else fail(model, "updated");
   };
 
   const deletePost = async (id) => {
@@ -71,7 +77,8 @@ function useHookPost() {
     if (res === "success") {
       let _posts = posts.filter((x) => x.id !== id);
       setPosts(_posts);
-    }
+      success(model, "deleted");
+    } else fail(model, "deleted");
   };
 
   return [

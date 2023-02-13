@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Row, Col, Card } from "antd";
 
 import { useParams } from "react-router-dom";
-import { showUser } from "../../../apis/user";
+import { showUser } from "./../../apis/user";
 
 export default function DetailUser() {
   let { id } = useParams();
