@@ -15,7 +15,10 @@ export default function Head() {
 
   const handleLogout = async () => {
     let res = await logout();
-    if (res === "success") history("/login");
+    if (res === "success") {
+      localStorage.clear();
+      history("/login");
+    }
   };
 
   const backPage = () => {

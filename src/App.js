@@ -11,20 +11,18 @@ import FormPost from "./components/posts/Form";
 import DetailUser from "./components/user/Detail";
 import Category from "./components/categories/Category";
 import DetailCategory from "./components/categories/Detail";
-import { useCookies } from "react-cookie";
+import Page404 from "./components/404";
 
 function App() {
-  const [cookie, setCookie] = useCookies([]);
-
   const RequireNoAuth = (props) => {
-    if (Object.keys(cookie).length === 0) {
+    if (!localStorage.getItem("token")) {
       return props.component;
     }
     document.location = "/";
   };
 
   const RequireAuth = (props) => {
-    if (cookie) {
+    if (localStorage.getItem("token")) {
       return props.component;
     }
     document.location = "/login";
@@ -49,6 +47,7 @@ function App() {
           <Route path="categories" element={<Category />} />
           <Route path="categories/:id" element={<DetailCategory />} />
         </Route>
+        <Route path="*" element={<Page404 />} />
       </Routes>
     </BrowserRouter>
   );

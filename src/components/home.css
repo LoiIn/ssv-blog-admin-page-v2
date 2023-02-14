@@ -178,3 +178,15 @@
 .search__form__btn{
   text-align: center;
 }
+
+.error__page{
+  margin-top: 50px;
+}
+
+.error__page .err__404{
+  background-color: #bbd8f2ac;
+}
+
+.error__page .err__500 {
+  background-color: rgba(235, 190, 190, 0.236);
+}

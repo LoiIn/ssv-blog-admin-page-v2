@@ -12,8 +12,9 @@ export default function Login() {
   const history = useNavigate();
 
   const handleLogin = async (values) => {
-    let { status, token, data } = await login(values);
+    let { status, data } = await login(values);
     if (status === "success") {
+      localStorage.setItem("token", data.id);
       history("/");
     }
   };
